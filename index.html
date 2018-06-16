@@ -1,0 +1,31 @@
+<html lang="en-US">
+<head>
+	<title>
+		Simple Search Bar
+	</title>
+	<link rel="stylesheet" type="text/css" href="CSS/Styles.css">
+	<script>
+	function Search() {
+		var Info = document.getElementById("Search").value
+		window.location.href="https://www.google.com/search?q=" + Info +"&ie=utf-8&oe=utf-8&client=firefox-b-1-ab"
+	}
+	</script>
+</head>
+<body>
+	<center>
+		<h1 id="SYSTITLE">Simple Search Bar</h1>
+		<br>
+		<br>
+		<input id="Search" type="text" placeholder="Search the Web!"></input>
+		<br>
+		<button id="SearchButton" onclick="Search()">Search</button>
+	</center>
+		<script>
+	document.getElementById("Search").onkeypress = function(event) {
+   if (event.keyCode == 13) {
+      Search()
+   		}
+	}
+	</script>
+</body>
+</html>
